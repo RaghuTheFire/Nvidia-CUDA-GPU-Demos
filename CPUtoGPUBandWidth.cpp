@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cuda_runtime.h>
 
-void checkBandwidth() {
+void checkBandwidth() 
+{
     int deviceCount;
     cudaGetDeviceCount(&deviceCount);
     
-    for (int device = 0; device < deviceCount; ++device) {
+    for (int device = 0; device < deviceCount; ++device) 
+    {
         cudaDeviceProp prop;
         cudaGetDeviceProperties(&prop, device);
         
@@ -14,7 +16,8 @@ void checkBandwidth() {
     }
 }
 
-int main() {
+int main() 
+{
     checkBandwidth();
     return 0;
 }
